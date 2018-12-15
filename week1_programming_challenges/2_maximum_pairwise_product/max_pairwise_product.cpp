@@ -18,7 +18,7 @@ int MaxPairwiseProduct(const std::vector<int>& numbers) {
 }
 
 
-int MaxPairwiseProductFast(const std::vector<int>& numbers) {
+size_t MaxPairwiseProductFast(const std::vector<int>& numbers) {
     
     const auto n = numbers.size();
     
@@ -44,10 +44,12 @@ int MaxPairwiseProductFast(const std::vector<int>& numbers) {
         }
     }
 
-     std::cout << "first "  << first  << "\n";
-     std::cout << "second " << second << "\n";
+    const size_t maxProduct = size_t(first) * size_t(second);
 
-    return first * second;
+    std::cout << first  << "\n";
+    std::cout << second << "\n";
+
+    return maxProduct;
 }
 
 int main() {
@@ -58,7 +60,7 @@ int main() {
         std::cin >> numbers[i];
     }
 
-    int result = MaxPairwiseProductFast(numbers);
+    size_t result = MaxPairwiseProductFast(numbers);
     std::cout << result << "\n";
     return 0;
 }
