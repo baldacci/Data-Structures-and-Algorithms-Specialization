@@ -46,9 +46,6 @@ size_t MaxPairwiseProductFast(const std::vector<int>& numbers) {
 
     const size_t maxProduct = size_t(first) * size_t(second);
 
-    std::cout << first  << "\n";
-    std::cout << second << "\n";
-
     return maxProduct;
 }
 
